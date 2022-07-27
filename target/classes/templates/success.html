@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        h1{
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+<h1>Name: </h1> <h1 th:text="${name}"></h1> <br>
+<h1>address: </h1> <h1 th:text="${address}"></h1> <br>
+<h1>Phone number: </h1> <h1 th:text="${phone}"></h1> <br>
+<a href="/">
+    <button>Trang chính</button></a>
+</body>
+</html>

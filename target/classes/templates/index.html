@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:form="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <script src=".js"></script> -->
+    <link rel="stylesheet" href="style.css">
+    <title></title>
+</head>
+
+<body>
+
+<form th:action="@{/}" method="post" th:object="${input}">
+    <div>
+        <input type="text" placeholder="Họ và tên" th:field="*{name}"> <br>
+        <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}" ></span>
+    </div>
+    <div>
+        <input type="text" placeholder="Địa chỉ" th:field="*{address}"> <br>
+        <span th:if="${#fields.hasErrors('address')}" th:errors="*{address}" ></span>
+    </div>
+    <div>
+        <input type="text" placeholder="Số điện thoại" th:field="*{number}"> <br>
+        <span th:if="${#fields.hasErrors('number')}" th:errors="*{number}" ></span>
+    </div>
+    <button>Submit</button>
+</form>
+
+</body>
+
+</html>
